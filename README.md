@@ -1,4 +1,8 @@
 # FileSync
+
+Package is available on [nuget][nuget].
+
+
 FileSync with 2WaySync and UNC-Path Support
 
 ```cs
@@ -30,3 +34,7 @@ namespace Demo
     }
 }
 ```
+
+
+
+  [nuget]: https://www.nuget.org/packages/QXS.FileSync/
