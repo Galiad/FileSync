@@ -11,9 +11,15 @@ namespace Demo
 
         static void Main(string[] args)
         {
+            // folder1 = source, folder2 = destination
+            // notice: in 2 way sync folder1 = source/destination and folder2 = source/destination
             QXS.FileSync.FileSync sync = new QXS.FileSync.FileSync(folder1, folder2);
+            
+            // output every action on the destination side to the console
             sync.AttachLogger(new QXS.FileSync.ConsoleOutputLogger());
-            sync.Start(true); // start in master/master mode (2 way sync)
+            
+            // start in master/master mode (2 way sync)
+            sync.Start(true);  // set it to false, for master/slave mode (1 way sync)
             
             // Wait for the user to quit the program.
             Console.WriteLine("Press \'q\' to quit the sample.");
